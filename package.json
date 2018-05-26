@@ -1,0 +1,21 @@
+{
+  "name": "migrate",
+  "version": "1.0.0",
+  "description": "Database migrations for deployc",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "knex migrate:latest",
+    "revision": "knex migrate:make"
+  },
+  "keywords": [],
+  "author": "Jeremy Jacobson <jjacobson93@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deployc/migrate"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "knex": "0.14.6",
+    "pg": "7.4.3"
+  }
+}
