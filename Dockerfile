@@ -8,5 +8,5 @@ RUN apk --update add postgresql-client && \
 COPY knexfile.js entrypoint.sh ./
 COPY migrations ./migrations
 
-ENTRYPOINT [ "entrypoint.sh" ]
+ENTRYPOINT [ "/app/entrypoint.sh" ]
 CMD [ "npm", "run", "migrate" ]

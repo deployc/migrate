@@ -3,9 +3,9 @@ set -e
 
 #waiting for postgres
 until psql \
-    --host=$POSTGRES_HOST \
-    --username=$POSTGRES_USER \
-    $POSTGRES_DB -w &>/dev/null
+    -h $PG_HOST \
+    -U $PG_USER \
+    $PG_DB -w &>/dev/null
 do
   echo "Waiting for PostgreSQL..."
   sleep 1
